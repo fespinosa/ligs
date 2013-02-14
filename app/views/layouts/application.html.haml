@@ -1,0 +1,168 @@
+<!doctype html>
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %title TestBootstrap
+    = stylesheet_link_tag    "bootstrap.min" 
+    = stylesheet_link_tag    "bootstrap-responsive.min" 
+    = stylesheet_link_tag    "font-awesome.min" 
+    
+    = csrf_meta_tags 
+%body{:style => "background-image: url('/assets/gplaypattern.png');background-position: initial initial; background-repeat: initial initial;"}
+  / .navbar.navbar-fixed-top.navbar-static-top
+  /   .navbar-inner
+  /     %a.brand{:href => "#"}
+  /       #logo-titulo{:style => "margin-left:10px;"}
+  /         L.I.G.S.
+  /     %ul.nav
+  /       %li.divider-vertical
+  /       %li.active
+  /         %a{:href => "#"} Home
+  /       %li.divider-vertical
+  /       %li
+  /         %a{:href => "#"} Link
+  /       %li.divider-vertical
+  /       %li
+  /         %a{:href => "#"} Link
+  /       %li.divider-vertical
+  /       %li
+  /         %a{:href => "#"} Link
+  /       %li.divider-vertical
+  /       %form.navbar-search.pull-left
+  /         %input.search-query{:type => "text", :placeholder => "Search"}
+  .navbar.navbar-fixed-top.navbar-static-top
+    .navbar-inner
+      .container
+        %a.btn.btn-navbar{"data-target" => ".navbar-responsive-collapse", "data-toggle" => "collapse"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.brand{:href => "#{root_path}"} L.I.G.S.
+        .nav-collapse.collapse.navbar-responsive-collapse
+          %ul.nav
+            %li#home
+              %a{:href => "#{root_path}"} 
+                %i.icon-home
+                Home
+            %li#about_ligs
+              %a{:href => "#{about_ligs_path}"} 
+                %i.icon-bullhorn
+                Sobre L.I.G.S
+            %li#templo_central
+              %a{:href => "#{templo_central_path}"} 
+                %i.icon-road
+                Templo Central
+            %li#ministerio
+              %a{:href => "#{ministerio_path}"} 
+                %i.icon-briefcase
+                Ministerios
+            %li#encuentro
+              %a{:href => "#{encuentro_path}"} 
+                %i.icon-retweet
+                Encuentros
+            %li
+              %a{:href => "#"} 
+                %i.icon-picture
+                Medios
+            %li
+              %a{:href => "#"} 
+                %i.icon-book
+                Cursos de Formación
+            %li
+              %a{:href => "#"} 
+                %i.icon-envelope
+                Contacto
+
+  / %header#overview.jumbotron.subhead{:style => "margin-top:40px;background-image: url('/assets/debut_light.png');background-position: initial initial; background-repeat: initial initial;border-bottom:1px solid #B1B1B1;margin-bottom:5px;"}
+  /   .container
+  /     %br
+  /     %br
+  /     %br
+  /     .row
+  /       .span6
+  /         %h1 L.I.G.S.
+  /         %p.lead Levantando un Imperio de Gente Santa.
+  /       .span6
+  /         %i.icon-desktop{:style => "font-size:100px;"}
+  /         %i.icon-laptop.icon-4x
+  /         %i.icon-tablet.icon-4x
+  /         %i.icon-mobile-phone.icon-4x
+  /     %br
+  /     %br
+  /     %br
+  #myCarousel.carousel.slide{:style => "margin-top:40px"}
+    .carousel-inner
+      .item.active
+        %img{:alt => "", :src => "assets/3.png"}
+          .carousel-caption
+            %p.lead Levantando un Imperio de Gente Santa.
+      .item
+        %img{:alt => "", :src => "assets/3.png"}
+          .carousel-caption
+            %p.lead Levantando un Imperio de Gente Santa.
+      .item
+        %img{:alt => "", :src => "assets/3.png"}
+          .carousel-caption
+            %p.lead Levantando un Imperio de Gente Santa.
+    %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"} ‹
+    %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"} ›
+  .container-fluid{:style => "border-top:1px solid #B1B1B1"}
+    .row-fluid{:style => "margin-top:5px;"}
+      .span8.offset2
+        = yield
+      / .span2{:style => "background-image: url('/assets/grey.png');background-position: initial initial; background-repeat: initial initial;height:400px;"}
+      /   .btn-group
+      /     %a.btn.btn-primary{:href => "#"}
+      /       %i.icon-user.icon-white
+      /       User
+      /     %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+      /       %span.caret
+      /     %ul.dropdown-menu
+      /       %li
+      /         %a{:href => "#"}
+      /           %i.icon-pencil
+      /           Edit
+      /       %li
+      /         %a{:href => "#"}
+      /           %i.icon-trash
+      /           Delete
+      /       %li
+      /         %a{:href => "#"}
+      /           %i.icon-ban-circle
+      /           Ban
+      /       %li.divider
+      /       %li
+      /         %a{:href => "#"}
+      /           %i.i
+      /           Make admin
+#footer{:style => "background-color: #f5f5f5;margin-top:100px;border:1px solid #b1b1b1"}
+  .container
+    .row
+      .span6.offset3{:style => "font-size: 12px;text-align:center;"}
+        %p
+          L.I.G.S. | Levantando un Imperio de Gente Santa © www.ligs.cl
+          %br
+          Templo Central ubicado en Avda. Américo Vespucio Sur 0292, La Cisterna. (Metro Estación La Cisterna)
+          %br
+          Personalidad Jurídica 2424
+          %br
+          Email: contacto@ligs.cl
+  = javascript_include_tag "jquery" 
+  = javascript_include_tag "application" 
+  = javascript_include_tag "bootstrap-transition"
+  = javascript_include_tag "bootstrap-alert"
+  = javascript_include_tag "bootstrap-modal"
+  = javascript_include_tag "bootstrap-dropdown"
+  = javascript_include_tag "bootstrap-scrollspy"
+  = javascript_include_tag "bootstrap-tab"
+  = javascript_include_tag "bootstrap-tooltip"
+  = javascript_include_tag "bootstrap-popover"
+  = javascript_include_tag "bootstrap-button"
+  = javascript_include_tag "bootstrap-collapse"
+  = javascript_include_tag "bootstrap-carousel"
+  = javascript_include_tag "bootstrap-typeahead"
+  = javascript_include_tag "bootstrap-affix"
+  - if @active
+    :javascript
+      $("##{@active}").addClass('active');
+

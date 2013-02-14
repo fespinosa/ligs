@@ -1,0 +1,202 @@
+:javascript
+  function menu(menu_active){
+    var array_menu = ["hombres", "mujeres", "jovenes", "kids", "arte"];
+    for(var i in array_menu){
+      if(array_menu[i] == menu_active){
+        $('#' + menu_active).fadeIn('slow');
+        $('#' + menu_active + '_m').addClass('active');;
+      }else{
+        $('#' + array_menu[i]).hide();
+        $('#' + array_menu[i] + '_m').removeClass('active');
+      }
+    }
+  }
+.container-fluid
+  .row-fluid
+    .span3.well{:style => "margin-top:15px;"}
+      %ul.nav.nav-list
+        %li.nav-header Sub-Menú
+        %li#hombres_m.active
+          %a{:href => "javascript:menu('hombres');"} Hombres
+        %li#mujeres_m
+          %a{:href => "javascript:menu('mujeres');"} Mujeres
+        %li#jovenes_m
+          %a{:href => "javascript:menu('jovenes');"} Jóvenes
+        %li#kids_m
+          %a{:href => "javascript:menu('kids');"} LIGS Kids
+        %li#arte_m
+          %a{:href => "javascript:menu('arte');"} Arte LIGS
+    #hombres.span9
+      %h1 Hombres
+      %p{:style => "text-align: justify;"}
+        Uno puede preguntarse cómo los ministerios de hombres se diferencian de los de las mujeres, o si vamos al caso, de cualquier clase de ministerio. Después de todo, parecería que los ministerios, si son hechos para el servicio del Señor, son todos iguales, sin importar el sexo, edad, o raza del individuo que sirve.
+      %p
+        El Ministerio de Hombres es la búsqueda activa de hombres para conectarlos con Dios, Su Palabra, y otros hombres, con el propósito de ganar, desarrollar, y entrenar en Cristo al hombre de Dios.
+      %p
+        De seguro sabemos una cosa -- Dios utilizará el corazón y la vida de cualquiera que escoja ponerse a Su disposición. La Biblia dice: "Id, y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, del Hijo, y del Espíritu Santo." Esta es la gran comisión dicha por Jesucristo mismo. En otras palabras, Jesucristo está comisionando a Sus seguidores a que vayan por todo el mundo y reproduzcan creyentes. Este es un gran llamado.
+      %p
+        Esto hace que surja una pregunta. ¿Cómo reproducimos creyentes? ¿Puede un ministerio de hombres capacitar a un hombre para entender mejor su llamado en la vida y cómo alcanzarlo? ¿Puede un ministerio de hombres desafiar a un hombre a crecer más en intelecto, emociones, y espíritu? ¿Puede un ministerio de hombres enseñar a los hombres a cómo permanecer sexualmente puros? 
+
+
+      %p
+        %strong ¡La respuesta a esta pregunta es un contundente sí! 
+    #mujeres.span9{:style => "display:none;"}
+      %h1 Mujeres
+      %p
+        Restaurar a toda mujer que esté atravesando momentos de crisis en su vida.   Tales como: soledad, divorcio, rechazo, ataduras, inseguridades miedos,  maltrato (físico, emocional), recuerdos dolorosos, amarguras, insatisfacciones, depresión, baja estima, problemas familiares y muchos más que le han golpeado fuertemente su corazón.
+      %p
+        Es conducir a la mujer a unos encuentros con ella misma, y permitir que el Espíritu Santo cambie su mujer interior.  Motivarla y equiparla con herramientas efectivas para que pueda enfrentarse a toda situación de su vida con sabiduría e inteligencia y sobre todo con la Palabra de Dios.
+      %p
+        Que logre levantarse y realizarse como una gran mujer, con todos los derechos de una hija de Dios; admirada, honrada, respetada, con valor propio, con destino y propósito. 
+      %p
+        Llegamos a cada mujer por medio de consejería, talleres, conferencias, retiros,  grupos de apoyo y diferentes actividades en las cuales les ministramos el amor de Dios y se les presenta a Jesucristo como el único que puede enfrentarnos a las dificultades y salir victoriosas.
+      %p
+        %strong ¡Levántate Mujer! 
+        Estamos para que juntas nos levantemos a nuevas alturas y ser mujeres triunfadoras llenas del poder y la gracia de Dios.
+    #jovenes.span9{:style => "display:none;"}
+      %h1 Jóvenes
+      %p{:style => "text-align: justify;"}
+        Los jóvenes en LIGS hacen parte importante dentro de la visión de alcanzar una juventud para Cristo. Una de las columnas más importantes de nuestra iglesia es contar con jóvenes comprometidos con Cristo y con un deseo ferviente por servir a Jesucristo.
+      %p
+        Nuestra  prioridad más importante es que cada joven establezca la presencia de Dios en su vida y en cada lugar donde él se desarrolle, sea en su casa, la universidad el trabajo o dentro de la misma Iglesia.
+      %p
+        Establecer un contacto con la palabra de Dios, el exponer nuestra causa a Dios, la importancia de comprender que la oración es una conversación con Dios, entre otros hace que en cada joven exista la motivación de desarrollarse dentro de la iglesia con sus talentos y cualidades personales. Creemos que en LIGS los jóvenes pueden alcanzar sus sueños ya que brindamos las herramientas necesarias para que cada joven encuentre su identidad en Cristo.
+      %p
+        Te invitamos a hacer parte de este ministerio donde cada persona será un reflejo de una juventud nueva que brinde soluciones a la sociedad y lo más importante que cada joven impacte a otros jóvenes mostrando una alternativa de vida que refleje el amor de Cristo.
+
+      
+    #kids.span9{:style => "display:none;"}
+      %h1 L.I.G.S. Kids 
+
+      %h3 MISION
+      %p{:style => "text-align: justify;"}
+        Restaurar, equipar y formar una nueva generación de niños apasionados por Dios sirviéndoles con amor, excelencia, dedicación, santidad y compromiso por medio de la alabanza, el teatro y la ministración del amor de Dios.
+      %p{:style => "text-align: justify;"}
+        Este Ministerio nació de la necesidad de proveer un espacio tanto para niños como para adolescentes entre los 3 y los 9 años, donde tengan la oportunidad de conocer realmente a Dios sin importar su edad, motivándolos a que ellos reciban y acepten a Jesús en sus corazones y plasmar en sus vidas de una manera genuina la reverencia, el respeto, la fe, el amor y la pasión por Dios, acompañadas de adoración, oración, santidad y excelencia, como valores y principios de una vida cristiana y que ellos descubran y perfeccionen sus talentos y habilidades y los usen al servicio del Señor. 
+        .container-fluid
+          .row-fluid
+            .span6
+              %img.img-polaroid{:alt => "LIGS Kids", :src => "assets/ninos_ligs_kids.jpg"}
+            .span6
+              %p
+                %strong LIGS KIDS
+                , realiza actividades que estimulan el desarrollo y la creatividad, pero sobre todo, busca formar la relación personal con Dios, para que ellos sean el impacto a las nuevas generaciones y aún a las personas mayores que no conocen de Jesús, pues no hay límites de edad para empezar a servir y amar a Dios de todo corazón, por eso este Ministerio está enfocado y trabaja arduamente para que los niños se acerquen a Él.
+              %p
+                Una de las maneras en que cumplimos nuestra misión, es a través de talleres cuyo propósito principal es formar el carácter del niño y del adolescente a la estatura de Jesucristo, motivándolos a integrarse, permanecer y servir en la Iglesia, preparándolos para ser formadores de una nueva nación.
+          .row-fluid
+            .span12
+              %p
+                Dios tiene un llamado para cada uno, quizás nos encontramos frente a nuestros futuros misioneros, pastores, apóstoles, maestros, embajadores, presidentes, músicos, empresarios, profesores, artistas, etc., por eso nos esforzamos porque su formación sea óptima y porque tenemos la seguridad y la certeza de que una vida encaminada con Dios logrará cosas inimaginables.
+              %p
+                Otra de nuestras labores es proporcionarles espacios donde ellos creen lazos de amistad y compañerismo, y puedan expresarse libremente y se sientan amados, valorados y respetados, motivados por el sueño de ver vidas transformadas, niños y adolescentes que impacten a otros con su manera de vivir y que ministren a la iglesia, personas que a pesar de su corta edad,  prediquen y busquen al Señor su Dios con toda su alma, con todo su corazón y con toda su mente, personas que sin importar su estatura, su edad o circunstancias, su mayor anhelo sea agradar a Dios, y proyectarse a ser los futuros guías y maestros de este Ministerio.
+              %p
+                Creemos que la base de una comunidad o una sociedad siempre serán los niños y adolescentes porque son los adultos del futuro, y que lo que ellos reciban ahora se reflejará en sus actos y comportamientos, de ahí la preocupación de nuestro Ministerio de formarlos cimentados en la Palabra de Dios y ver a las nuevas generaciones de Chile consagradas al Señor.
+    #arte.span9{:style => "display:none;"}
+      %h1 Artes LIGS
+      %p
+        A través del arte podemos no solo traer vida a una nación sino de igual forma elevar nuestro propio nivel de vida, 
+        %strong Artes LIGS 
+        no solo es una oportunidad para explotar tu talento, sino que tiene el propósito de formar jóvenes, no sólo a nivel técnico, sino a través de valores para hacer de cada miembro un apoyo para nuestra sociedad.
+      %p
+        A través del arte podemos traer vida a una nación. 
+        %strong ARTES LIGS 
+        es un movimiento que está cambiando las vidas de muchos de jóvenes. Ha llegado el tiempo para que seas parte del cambio, es tiempo de entregar tus talentos a los pies del Señor y Glorificarlo con lo que sabes hacer.
+      %strong ¿Quién puede participar en Artes LIGS?
+      %p
+        Creemos que cualquier Cristiano puede adorar a su Señor de manera genuina, sin embargo creemos que es necesario que los integrantes de 
+        %strong Artes LIGS 
+        posean cierta madurez y claridad en su Vida Cristiana. Basados en lo anterior, definimos algunos requisitos básicos para participar en el ministerio:
+      %ol{:type => "1"}
+        %li 
+          Espirituales:
+          %p Tener una vida espiritual en progreso, es decir:
+          %p
+            %ul
+              %li Muestra fruto del Espíritu Santo en crecimiento.
+              %li Cultiva una vida devocional cotidiana.
+              %li Su búsqueda y relación personal con Cristo va en aumento.
+              %li Conoce y práctica la ética Cristiana.
+              %li Lleva una vida marcada por su santidad.
+              %li Ejercita su corazón de adorador diariamente.
+              %li Participa en algún nivel de discipulado.
+              %li Esta de acuerdo con la visión de la Iglesia y la promueve Participa regularmente en las reuniones.
+              %li Tiene un testimonio limpio en sus relaciones fuera de la iglesia.
+        %li 
+          Emocionales:
+          %p
+            %ul
+              %li Tiene una vida emocional equilibrada.
+              %li Cultiva una relación familiar armoniosa y creciente. Su cónyuge está de acuerdo con su participación en el liderazgo de la iglesia y lo que esto conlleva.
+              %li Tiene relaciones armoniosas con los hermanos de la iglesia.
+        %li
+          De habilidades y participación:
+          %p
+            %ul
+              %li Esta dispuesto a poner sus dones y recursos al servicio de Dios.
+              %li Creemos que todo don o talento es dado y repartido por Dios por lo que cada criatura debe ser capaz de entregar esta capacidad en alabanza a Dios. Es así que en el ministerio de alabanza buscamos disposición de entrega en los dones artísticos o musicales que posea la persona, como así también cada uno de los recursos materiales o físicos que crea que son necesarios en la participación del ministerio.
+              %li Posee habilidades musicales o similares que le permitan participar en el ministerio.
+              %li Procura capacitarse para realizar sus labores de la mejor manera posible. Prioriza el consenso y la unidad.
+              %li Muestra fidelidad, puntualidad y responsabilidad.
+              %li Cuente con el tiempo necesario para cumplir con las exigencias del ministerio.
+              %li Es decir tiempo para ensayos (y la duración de éstos), retiros, culto, actividades especiales. En este aspecto existirá flexibilidad, sin embargo se espera un priorización del participante con referencia al ministerio.
+      %strong Alabanza y Adoración LIGS:
+      %br
+      %p
+        %img.img-polaroid{ :src => "assets/311368_267379319961943_622532022_n.jpg" }
+      %strong ¿Que es el ministerio de Alabanza y Adoración?
+      %p Es un grupo humano que tiene como misión:
+      %strong Glorificar a Dios a través de la alabanza congregacional y personal, coronando a Jesucristo como el único Líder de ésta, ofreciendo lo mejor de lo nuestro en respuesta a lo que Él ha hecho por nosotros.
+      %p Es necesario mencionar que el ministerio de alabanza no se restringe solamente a la interpretación musical o a la actividad cúltica. Creemos que la alabanza y la adoración son parte integral de la vida del creyente por lo cual buscamos una experiencia personal de intimidad en la presencia de nuestro Señor, y por eso entendemos la alabanza como más que sólo una actividad religiosa, vale decir, como una verdadera forma de vida.
+      %strong ¿Qué hace el Ministerio de Alabanza?
+      %ul
+        %li Orar para que el Señor nos esté acercando diariamente como iglesia, a tener un corazón de adoración y de exaltación de su gloria.
+        %li Guiar a la congregación en adoración a través de la música durante el culto dominical y en las que el liderazgo de la iglesia lo considere necesario.
+        %li Practicar y ensayar las canciones que el líder de alabanza ha apartado como escogidas para el tiempo de adoración congregacional.
+        %li Difundir en forma material el ministerio al interior de la congregación, permitiendo a los hermanos de la iglesia identificarse con el estilo de adoración que buscamos como Iglesia Presencia de Dios.
+        %li Mantenerse en estrecho contacto con el cuerpo de liderazgo de la iglesia, con el fin de compartir las directrices que el Señor ha plasmado en la mente y el espíritu de ellos, con respecto a la iglesia y el ministerio en particular.
+        %li Capacitar, en la medida de lo posible, a los miembros del ministerio tanto en el área técnica como espiritual, por medio de la participación en congresos, convenciones, cursos, talleres, discipulados, etc., que profundicen el tema de la adoración y que sean de bendición para sus participantes. Factor importante aquí es la interacción con otras Iglesias locales.
+      %p
+        El ministerio de alabanza de la Iglesia LIGS tiene como objetivo hacer de las  alabanzas un canal a través del cual se pueda establecer la presencia de Dios en la iglesia y por ende en la  vida de cada persona, haciendo de la alabanza y de la adoración a Dios un estilo de vida; Creemos que a través de las alabanzas podemos llevar el mensaje de Jesús a cada persona y de esta manera cumplir con la gran comisión a la que todos hemos sido llamados.
+      %strong Danzas LIGS:
+      %br
+      %p
+        %img.img-polaroid{:src => "assets/564487_454840537882486_1999800186_n.jpg"}
+      %p
+        Al danzar, manifestamos desde nuestra alma y a través de nuestro cuerpo, que como templo del Espíritu Santo llevamos testimonio al mundo, expresando que somos hechura suya y que El ha obrado maravillas en nuestras vidas. A través de esta expresión también queremos animar y motivar al Cuerpo de Cristo a entrar en una actitud profunda de adoración, gozo y entrega al Señor.
+      %p
+        Asimismo, hemos comprendido que la danza cristiana posee muchos alcances, entre ellos:
+        %ul
+          %li Alabanza
+          %li Guerra Espiritual
+          %li Sanidad Interior
+      %p
+        Queremos llevar a nuestra congregación a una mayor intimidad con el Señor Jesús, deseamos que la gente exprese libremente y de manera integral su alabanza y gratitud, entrega y amor hacia el Señor y participe también en el avance del Reino haciendo guerra espiritual al entonar cánticos y danzar. Nuestro objetivo final es poder danzar guiados por el Espíritu Santo y que esta expresión sea derramada sobre la congregación.
+      %strong Teatro LIGS:
+      %p 
+        %img.img-polaroid{:src => "assets/teatro2.jpg"}
+      %p
+        Sin duda alguna que todas las personas hemos recibido talentos de parte del señor, y muchas veces no los desarrollamos para El, Creemos con todo nuestro corazón que podemos glorificar el nombre se Jesús de múltiples maneras y una de ellas es a través del teatro.
+      %p
+        %strong Teatro LIGS 
+        nos brinda la oportunidad de desarrollar nuestros talentos artísticos, tanto a Jóvenes como adultos y a todos aquellos se quieran ser parte de una manera distinta de Glorificar a nuestro Dios.
+
+         
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+:javascript
+  function menu(menu_active){
+    var array_menu = ["mision", "vision", "historia"];
+    for(var i in array_menu){
+      if(array_menu[i] == menu_active){
+        $('#' + menu_active).fadeIn('slow');
+        $('#' + menu_active + '_m').addClass('active');;
+      }else{
+        $('#' + array_menu[i]).hide();
+        $('#' + array_menu[i] + '_m').removeClass('active');
+      }
+    }
+  }
+.container-fluid
+  .row-fluid
+    .span3.well{:style => "margin-top:15px;"}
+      %ul.nav.nav-list
+        %li.nav-header Sub-Menú
+        %li#mision_m.active
+          %a{:href => "javascript:menu('mision');"} Misión
+        %li#vision_m
+          %a{:href => "javascript:menu('vision');"} Visión
+        %li#historia_m
+          %a{:href => "javascript:menu('historia');"} Historia
+    #mision.span9
+      %h1 Misión de L.I.G.S. 
+      %ul
+        %li 1.    Establecemos la casa de oración como espacio de adoración y mover profético.
+        %li 2.    Promovemos la intimidad con Dios y la llenura del Espíritu Santo.
+        %li 3.    Discipulamos a través de grupos de hogares.
+        %li 4.    Formamos bíblicamente líderes integrales para ser influencia.
+        %li 5.    Desarrollamos el uso de los talentos y dones espirituales
+        %li 6.    Preparamos la iglesia para la segunda venida
+      %p{:style => "text-align: justify;"}
+        %strong VALORES
+      %ul
+        %li
+          %strong Amor:
+          Respeto al prójimo y  una vida de obediencia a sus mandamientos.
+        %li
+          %strong> Integridad
+          \: Hacerlo todo delante de Dios.
+        %li
+          %strong Excelencia:
+          Honrar a Dios, dándole lo mejor.
+        %li
+          %strong> Servicio
+          \: No vinimos a ser servidos sino a servir
+    #vision.span9{:style => "display:none;"}
+      %h1 Visión de L.I.G.S.
+      %p
+        Seremos un ministerio que levantará en nuestra nación el nombre de Jesús  atrayendo a las multitudes  a una relación con el Señor, donde serán transformadas y preparadas para servirle.
+    #historia.span9{:style => "display:none;"}
+      %h1 Historia
+      %p{:style => "text-align: justify;"}
+        %strong Salmos 2:8… “Pídeme, y  te daré por herencia las naciones, y como posesión tuya los confines de la tierra”.
+        %br
+          La palabra de Salmos 2:8 es la que marcó el inicio del primer año de LIGS y la que nos ha llevado como iglesia a estar cada día mas sedientos de la presencia y gloria de Dios.
+          %br
+            %br
+              %strong LIGS
+              nace en Agosto del año 2010 con el fin de poder
+              %strong Levantar un Imperio de Gente Santa
+              que pueda aprender a tener una relación intima con el Espíritu Santo y dejarse llevar por los ríos de agua viva que hay para cada miembro de nuestra iglesia, y para todo aquel que quiera vivir experiencias que cambiaran su vida.
+              %br
+                %br
+                  LIGS es sostenidos por el evidente respaldo Divino, sabiendo que los sueños, el llamado y la unción son dados por el Padre, única e inequívocamente, afirmados en principios básicos como el AMOR, la INTEGRIDAD, la EXCELENCIA y el SERVICIO puesto en El.
+                  %br
+                    %br
+                      Convencidos de que Dios tiene grandes planes para esta generación,
+                      %strong LIGS
+                      sueña con un ministerio que trascienda no sólo las fronteras de nuestra nación, sino también las fronteras denominacionales y espirituales de la Iglesia en el mundo, inspirados en esta promesa que años atrás Dios nos revelara en el libro de
+                      %strong Salmos capítulo 2:8
+                      ; sin fronteras ni límites en su fé, que sea capaz de penetrar cada espacio de nuestra sociedad, e impactarla con la Palabra de Dios, un ministerio de puertas abiertas, que pueda tender puentes de comunicación con el resto del cuerpo de Cristo, en busca de la unidad de la Iglesia en este tiempo, un ministerio en el cual el único muro que veamos, sea el muro del fuego de Dios, alrededor de su pueblo.

@@ -1,0 +1,89 @@
+:javascript
+  function menu(menu_active){
+    var array_menu = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    for(var i in array_menu){
+      if(array_menu[i] == menu_active){
+        $('#' + menu_active).fadeIn('slow');
+        $('#' + menu_active + '_m').addClass('active');;
+      }else{
+        $('#' + array_menu[i]).hide();
+        $('#' + array_menu[i] + '_m').removeClass('active');
+      }
+    }
+  }
+.container-fluid
+  .row-fluid
+    .span3.well{:style => "margin-top:15px;"}
+      %ul.nav.nav-list
+        %li.nav-header Sub-Menú
+        %li#1_m.active
+          %a{:href => "javascript:menu('1');"} ¿Qué necesitamos?
+        %li#2_m
+          %a{:href => "javascript:menu('2');"} ¿Quién necesita un encuentro?
+        %li#3_m
+          %a{:href => "javascript:menu('3');"} ¿Donde se realiza?
+        %li#4_m
+          %a{:href => "javascript:menu('4');"} ¿Quién se encarga?
+        %li#5_m
+          %a{:href => "javascript:menu('5');"} ¿Cuántos día dura?
+        %li#6_m
+          %a{:href => "javascript:menu('6');"} ¿Cuáles son los requisitos?
+        %li#7_m
+          %a{:href => "javascript:menu('7');"} ¿Cómo me inscribo?
+        %li.divider
+        %li#8_m
+          %a{:href => "javascript:menu('8');"} Reencuentro
+        %li#9_m
+          %a{:href => "javascript:menu('9');"} Lugar y fechas de encuentro
+    #1.span9
+      %h1 ¿Qué Necesitamos?
+      %p
+        Un corazón dispuesto 
+        %strong (Job 11:13). 
+        Reconocer nuestra necesidad y ser sensibles a la voz de Dios. El Encuentro como evento no va a cambiar su vida. Lo único que nosotros hacemos es preparar el camino para el Señor 
+        %strong (Lucas 3:4-6)
+        , crear el ambiente necesario y preparar los corazones, sin embargo el secreto para que su vida sea cambiada es la persona con la que tendrá ese Encuentro: 
+        %strong el Señor Jesucristo.
+      
+    #2.span9{:style => "display:none;"}
+      %h1 ¿Quién Necesita un Encuentro?
+      %p
+        Toda persona que se inicia en los caminos del Señor y/o desee crecer espiritualmente 
+        %strong (Hechos 9:9). 
+        Después de tres días a solas con Dios, Pablo estaba dispuesto a hacer lo que Dios quería para él. En ese momento, el propósito de Dios fue revelado a su vida, porque Dios sólo pone su visión en un vaso limpio. Lo mismo hace con nosotros cuando en el Encuentro somos confrontados, limpiados, restaurados y renovados.
+    #3.span9{:style => "display:none;"}
+      %h1 ¿Donde se Realiza el Encuentro?
+      %p
+        En un lugar retirado de su casa o la iglesia.
+    #4.span9{:style => "display:none;"}
+      %h1 ¿Quién se Encarga de Realizar el Evento?
+      %p
+        Hay un equipo de trabajo, conformado por:
+      %ul
+
+        %li Pastores: Encargados de la organización, desarrollo y supervisión del Encuentro.
+        %li Líderes de Encuentro: Encargados de la logística en el lugar escogido y responsables del funcionamiento de acuerdo con lo establecido.
+        %li Guías de Encuentro :Soportes de líderes de Encuentro en todo el desarrollo del evento.
+    #5.span9{:style => "display:none;"}
+      %h1 ¿Cuantos Días Dura?
+      %p
+        Se realiza en un fin de semana. Empieza el viernes en la noche, continúa el sábado en el sitio establecido e incluye el hospedaje de esas dos noches. Finaliza el domingo en la tarde.
+    #6.span9{:style => "display:none;"}
+      %h1 ¿Cuales son los Requisitos?
+
+      %ol{:type => "1"}
+        %li Estar asistiendo a un Grupo de hogar.
+        %li Recibir, de parte del líder o de la persona delegada por el mismo, la enseñanza de los Pre-Encuentro. 
+        %li Haber cancelado el valor del Encuentro.
+    #7.span9{:style => "display:none;"}
+      %h1 ¿Como me Inscribo?
+      %p Comuníquese con su Líder o Encargado de grupo. Él le brindara la información sobre forma de pago e inscripción.
+    #8.span9{:style => "display:none;"}
+      %h1 ¿Donde se Realiza el Encuentro?
+      %p
+        En un lugar retirado de su casa o la iglesia.
+    #9.span9{:style => "display:none;"}
+      %h1 ¿Donde se Realiza el Encuentro?
+      %p
+        En un lugar retirado de su casa o la iglesia.
+

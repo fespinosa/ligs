@@ -1,0 +1,38 @@
+:javascript
+  function menu(menu_active){
+    var array_menu = ["dateday", "grouphouse"];
+    for(var i in array_menu){
+      if(array_menu[i] == menu_active){
+        $('#' + menu_active).fadeIn('slow');
+        $('#' + menu_active + '_m').addClass('active');;
+      }else{
+        $('#' + array_menu[i]).hide();
+        $('#' + array_menu[i] + '_m').removeClass('active');
+      }
+    }
+  }
+.container-fluid
+  .row-fluid
+    .span3.well{:style => "margin-top:15px;"}
+      %ul.nav.nav-list
+        %li.nav-header Sub-Menú
+        %li#dateday_m.active
+          %a{:href => "javascript:menu('dateday');"} Días de Reuniones
+        %li#grouphouse_m
+          %a{:href => "javascript:menu('grouphouse');"} Grupos de Hogar
+    #dateday.span9
+      %h1 Días de Reuniones 
+      %p
+        Nuestros cultos de avivamiento, sanidades, adoración y alabanza. Se realizan todos los domingos en el templo central ubicado en Avda. Américo Vespucio Sur 0292, La Cisterna. (Metro Estación La Cisterna).
+      %p
+        %strong Horario: Domingos a partir de las 18:30 hrs
+      %p
+        %strong Días de Oración:
+      %p
+        Miércoles a las 20:00 hrs en Templo Central ubicado en Avda. Américo Vespucio Sur 0292, La Cisterna. (Metro Estación La Cisterna).
+        Martes a las 20:00 hrs en sector norte de Santiago, Comuna de Quilicura. (Contactar a contacto@ligs.cl).
+      %img{:alt => "Ubicación de LIGS", :border => "0", :src => "assets/mapa_ligs.jpg"}/
+    #grouphouse.span9
+      %h1 Grupos de Hogar 
+      %p
+        El eje principal de la iglesia y el punto de partida de todo el proceso de formación, tanto para las personas nuevas como para cristianos que quieran estar plantados en la iglesia, son los “Grupos de Hogar”. El propósito del Grupo de Hogar es tener un lugar en donde las personas se conecten a la iglesia, se relacionen con otros, sean formadas, puedan servir, y puedan disfrutar de los beneficios que la iglesia ofrece a quienes están plantados.
